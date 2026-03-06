@@ -19,5 +19,5 @@ jobs:
         run: |
           git clone https://github.com/hexsecteam/worm-gpt
           cd worm-gpt
-          python3 wormgpt.py
+          python3 ai.py
           sleep 6h
