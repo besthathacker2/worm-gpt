@@ -1,0 +1,23 @@
+name: Run Command
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run command
+        run: |
+          git clone https://github.com/hexsecteam/worm-gpt
+          cd worm-gpt
+          python3 wormgpt.py
+          sleep 6h
